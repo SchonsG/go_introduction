@@ -46,4 +46,19 @@ func main() {
 	arrayThree[1] = 100
 	fmt.Println(arrayThree)
 	fmt.Println(sliceThree)
+
+
+
+	// Intern arrays
+	fmt.Println("-------------------- Intern array")
+	sliceFour := make([]float32, 10, 11)
+	fmt.Println(len(sliceFour)) // length
+	fmt.Println(cap(sliceFour)) // capacity
+
+	sliceFour = append(sliceFour, 1)
+	sliceFour = append(sliceFour, 2)
+	fmt.Println(len(sliceFour)) // length
+	fmt.Println(cap(sliceFour)) // capacity double in comparation with the first created
+	// For default, Go when see that your slice gonna pass the capacity,
+	// creates other array with double capacity and references it for slice.
 }
